@@ -116,14 +116,14 @@
             <ul>
                 <li><strong>1. Argos (Vigília Silenciosa):</strong> Lê os grupos do WhatsApp, identifica demandas, mapeia o fluxo e alimenta o dashboard de gestão. (Entra primeiro para gerar dados, sem interagir com ninguém).</li>
                 <li><strong>2. Mentor Jurídico:</strong> Agente focado exclusivamente na equipe interna. Presta apoio na elaboração de peças, alerta sobre prazos críticos (D2/D1/Fatal) cruzando dados do LegalOne e traduz andamentos processuais para linguagem leiga.</li>
-                <li><strong>3. Secretária / Concierge:</strong> O único agente que se comunicará com o cliente final. Acalma o cliente, confirma o recebimento das demandas, controla o SLA rigoroso de 48h e notifica os advogados responsáveis.</li>
+                <li><strong>3. Secretária / Concierge:</strong> O único agente que se comunicará com o cliente final. Acalma o cliente, confirma o recebimento das demandas, controla o SLA rigoroso de 48h e notifica os advogados responsáveis. Possui um script de operação que poderá ser acionado manualmente, ou através de uma rotina programada.</li>
             </ul>
         </section>
 
         <section>
             <h2>Infraestrutura e Segurança (Backbone)</h2>
             <ul>
-                <li><strong>Estação Themis (Operação Local):</strong> O sistema rodará em um Desktop dedicado na MLP Advogados, ligado 24/7. Os dados são processados de forma segura dentro do escritório.</li>
+                <li><strong>Estação Themis (Operação Local):</strong> As informações serão protegidas internamente, porém utilizando ferramentas de IA.</li>
                 <li><strong>Gestão no ClickUp:</strong> Dashboard dinâmico em formato Kanban para a equipe acompanhar o que está pendente, segmentado por perfil de acesso (Cível, Tributário, etc.).</li>
                 <li><strong>Matriz de Legitimidade:</strong> Planilha estruturada que define quem é o cliente, quais são os grupos canônicos (máximo 2 por cliente) e restringe quem possui autorização para solicitar demandas.</li>
             </ul>
@@ -134,7 +134,7 @@
             <p>Alinhado com a visão de eficiência das coordenações da MLP (conforme solicitado na reunião de briefing):</p>
             <ul>
                 <li><strong>Acesso Direto, Sem Estresse:</strong> O suporte técnico será prestado diretamente pelo Ecossistema Live. <strong>Sem chatbots burocráticos</strong> que geram atrito e atrasam a resolução. Priorizamos a agilidade que a equipe jurídica exige.</li>
-                <li><strong>Acesso Remoto Seguro e Autenticado:</strong> A Estação Themis contará com acesso remoto (protegido por Autenticação em 2 Fatores - 2FA). Isso nos permite intervir e corrigir inconsistências instantaneamente, sem a necessidade de deslocamento físico.</li>
+                <li><strong>Acesso Remoto Seguro e Autenticado:</strong> O acesso é realizado através de sistema terceiro (TeamViewer ou AnyDesk), protegido por Autenticação em 2 Fatores (2FA). Isso nos permite intervir e corrigir inconsistências instantaneamente, sem a necessidade de deslocamento físico.</li>
                 <li><strong>Alta Disponibilidade:</strong> Monitoramento para atuação imediata caso o WhatsApp desconecte ou as integrações apresentem intermitência.</li>
             </ul>
         </section>
@@ -144,8 +144,8 @@
             <ul>
                 <li><strong>Honorários de Consultoria:</strong> (A constar no envio final).</li>
                 <li><strong>Licenciamentos (Custo Mensal do Escritório):</strong> 
-                    <br><br>1. Conta paga do Claude AI.
-                    <br>2. Assentos (Seats) no ClickUp para a equipe.
+                    <br><br>1. Conta paga do Claude AI (o escritório deve escolher uma assinatura, a partir de R$ 110).
+                    <br>2. Assentos (Seats) no ClickUp para a equipe (a conta gratuita já atende).
                     <br>3. Máquina Desktop base e chip de WhatsApp.
                 </li>
             </ul>
