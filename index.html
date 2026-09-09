@@ -4,90 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proposta Comercial - Projeto Themis (MLP Advogados)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0b192c;
-            --text-color: #e2e8f0;
-            --accent-color: #eab308;
-            --secondary-bg: #1e293b;
-            --link-color: #3b82f6;
+            --bg-color: #f8fafc; /* Light gray/off-white background */
+            --text-color: #334155; /* Dark gray for readability */
+            --heading-color: #0f172a; /* Deep blue/black for headings */
+            --accent-color: #0b192c; /* Live's Dark Blue */
+            --accent-gold: #d4af37; /* Refined Gold */
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
+            -webkit-font-smoothing: antialiased;
         }
 
         header {
-            background-color: var(--secondary-bg);
-            padding: 4rem 2rem;
+            background-color: var(--accent-color);
+            padding: 5rem 2rem;
             text-align: center;
-            border-bottom: 2px solid var(--accent-color);
+            border-bottom: 4px solid var(--accent-gold);
+            color: #ffffff;
         }
 
         header h1 {
-            color: var(--accent-color);
-            margin: 0;
-            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-gold);
+            margin: 0 0 1rem 0;
+            font-size: 3rem;
+            letter-spacing: -0.5px;
         }
 
         header p {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            color: #94a3b8;
+            font-size: 1.25rem;
+            margin: 0;
+            color: #cbd5e1;
+            font-weight: 300;
         }
 
         main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: -3rem auto 3rem auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
         }
 
         section {
-            margin-bottom: 3rem;
+            background: var(--card-bg);
+            margin-bottom: 2.5rem;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-color);
         }
 
         h2 {
+            font-family: 'Playfair Display', serif;
             color: var(--accent-color);
-            border-bottom: 1px solid #334155;
-            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 0.75rem;
             margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
         }
 
         ul {
             list-style-type: none;
             padding-left: 0;
+            margin: 0;
         }
 
         li {
-            margin-bottom: 1rem;
-            background: var(--secondary-bg);
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--accent-gold);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
         }
 
         strong {
+            color: var(--heading-color);
+            font-weight: 600;
+        }
+
+        /* Table Styling */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: var(--accent-color);
             color: #ffffff;
+            padding: 1.25rem 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 1.25rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #f8fafc;
         }
 
         .cta-section {
-            background: var(--secondary-bg);
-            padding: 2rem;
-            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #1e293b 100%);
+            color: #ffffff;
             text-align: center;
-            margin-top: 4rem;
+            border: none;
+        }
+
+        .cta-section h2 {
+            color: var(--accent-gold);
+            border-bottom: none;
         }
         
+        .cta-section p {
+            font-size: 1.15rem;
+            margin-bottom: 0;
+        }
+
         footer {
             text-align: center;
-            padding: 2rem;
-            color: #64748b;
-            font-size: 0.9rem;
+            padding: 3rem 2rem;
+            color: #94a3b8;
+            font-size: 0.95rem;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        @media (max-width: 768px) {
+            header { padding: 4rem 1.5rem; }
+            main { margin-top: -2rem; padding: 0 1rem; }
+            section { padding: 2rem 1.5rem; }
+            header h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -151,37 +247,37 @@
                 </li>
             </ul>
 
-            <h3 style="margin-top: 2rem; color: var(--text-color);">Comparativo de Valores de Mercado (BR, 2026)</h3>
+            <h3>Comparativo de Valores de Mercado (BR, 2026)</h3>
             <p>Para fins de balizamento financeiro e transparência, apresentamos os valores médios (com foco no teto) praticados pelo mercado nacional para serviços semelhantes prestados separadamente:</p>
-            <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; text-align: left;">
+            <div class="table-wrapper">
+                <table>
                     <thead>
-                        <tr style="background-color: var(--secondary-bg); border-bottom: 2px solid var(--accent-color);">
-                            <th style="padding: 1rem;">Etapa</th>
-                            <th style="padding: 1rem;">Faixa de mercado</th>
-                            <th style="padding: 1rem;">Observação</th>
+                        <tr>
+                            <th>Etapa</th>
+                            <th>Faixa de mercado</th>
+                            <th>Observação</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid #334155;">
-                            <td style="padding: 1rem;">Diagnóstico + mapeamento de processos</td>
-                            <td style="padding: 1rem;">R$ 2.000 – 8.000 (avulso)</td>
-                            <td style="padding: 1rem;">Cobrança separada da implantação; evita "consultoria de graça" e filtra quem não tem orçamento.</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #334155;">
-                            <td style="padding: 1rem;">Implantação — agente único, 1 canal</td>
-                            <td style="padding: 1rem;">R$ 8.000 – 20.000 (setup único)</td>
-                            <td style="padding: 1rem;">Ex: WhatsApp + FAQ/qualificação de leads.</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #334155;">
-                            <td style="padding: 1rem;">Implantação — squad de agentes / múltiplas integrações</td>
-                            <td style="padding: 1rem;">R$ 15.000 – 40.000+ (setup único)</td>
-                            <td style="padding: 1rem;">Ex: WhatsApp + SLA + CRM/ERP + peticionamento.</td>
+                        <tr>
+                            <td>Diagnóstico + mapeamento de processos</td>
+                            <td>R$ 2.000 – 8.000 (avulso)</td>
+                            <td>Cobrança separada da implantação; evita "consultoria de graça" e filtra quem não tem orçamento.</td>
                         </tr>
                         <tr>
-                            <td style="padding: 1rem;">Suporte/sustentação mensal</td>
-                            <td style="padding: 1rem;">R$ 800 – 3.000 até R$ 5.000 – 20.000/mês</td>
-                            <td style="padding: 1rem;">Varia do suporte simples (R$ 800 - R$ 3k) até modelo de Squad + evolução contínua (R$ 5k a R$ 20k/mês).</td>
+                            <td>Implantação — agente único, 1 canal</td>
+                            <td>R$ 8.000 – 20.000 (setup único)</td>
+                            <td>Ex: WhatsApp + FAQ/qualificação de leads.</td>
+                        </tr>
+                        <tr>
+                            <td>Implantação — squad de agentes / múltiplas integrações</td>
+                            <td>R$ 15.000 – 40.000+ (setup único)</td>
+                            <td>Ex: WhatsApp + SLA + CRM/ERP + peticionamento.</td>
+                        </tr>
+                        <tr>
+                            <td>Suporte/sustentação mensal</td>
+                            <td>R$ 800 – 3.000 até R$ 5.000 – 20.000/mês</td>
+                            <td>Varia do suporte simples (R$ 800 - R$ 3k) até modelo de Squad + evolução contínua (R$ 5k a R$ 20k/mês).</td>
                         </tr>
                     </tbody>
                 </table>
